@@ -1,6 +1,5 @@
 package com.rodrigo.dsvendas.entities;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
