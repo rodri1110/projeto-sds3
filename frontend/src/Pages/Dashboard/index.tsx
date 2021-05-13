@@ -3,6 +3,8 @@ import DataTable from "componentes/DataTable";
 import DonutChart from "componentes/DonutChart";
 import Footer from "componentes/Footer";
 import NavBar from "componentes/NavBar";
+import Pagination from "componentes/Pagination";
+
 
 
 function Dashboard() {
