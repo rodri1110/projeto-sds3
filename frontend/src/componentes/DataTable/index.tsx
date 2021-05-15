@@ -36,10 +36,10 @@ function DataTable() {
                     <thead>
                         <tr>
                             <th>Data</th>
-                            <th>Vendedor</th>
-                            <th>Clientes visitados</th>
-                            <th>Negócios fechados</th>
-                            <th>Valor</th>
+                            <th>Player</th>
+                            <th>Partidas disputadas</th>
+                            <th>Vitórias</th>
+                            <th>Ganho R$</th>
                         </tr>
                     </thead>
                     <tbody>
