@@ -18,6 +18,10 @@ public class Seller {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	private String cpf;
+	private String email;
+	private String telefone;
+	private String password;
 	
 	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
@@ -44,6 +48,38 @@ public class Seller {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+		
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public List<Sale> getSales() {
