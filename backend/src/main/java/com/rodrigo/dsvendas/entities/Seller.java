@@ -1,6 +1,7 @@
 package com.rodrigo.dsvendas.entities;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -22,16 +23,34 @@ public class Seller {
 	private String email;
 	private String telefone;
 	private String password;
-	
+	private Date date;
+	private Double balance;
+
 	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
 	
 	public Seller() {
 	}
 	
-	public Seller(Long id, String name) {
+	public Seller(Long id, String name, String cpf, String email, String telefone, String password, Date date,
+			List<Sale> sales) {
+		super();
 		this.id = id;
 		this.name = name;
+		this.cpf = cpf;
+		this.email = email;
+		this.telefone = telefone;
+		this.password = password;
+		this.date = date;
+		this.sales = sales;
+	}
+	
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public Long getId() {
@@ -80,6 +99,10 @@ public class Seller {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}	
+
+	public Double getBalance() {
+		return balance;
 	}
 
 	public List<Sale> getSales() {
